@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <title>AIRS model</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- External JavaScript libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='indexPageStyle.css') }}">
+</head>
+<body>
+<div class="table">
+    <div class="table-cell">
+        <div class="modal">
+            <form>
+                <div id="profile">
+                    <div class="dashes"></div>
+                    <label for="mediaFile">Click to browse or drag an image here</label>
+                </div>
+                <div><h1>Upload a cat or dog image</h1></div>
+                <input type="file" id="mediaFile" name="file" style="display: none;"/>
+                <button type="button" id="uploadBtn" value="Upload">Upload</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='indexPage.js') }}"></script>
+</body>
+</html>

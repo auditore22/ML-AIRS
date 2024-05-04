@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AIRS - Prediction Result</title>
+    <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
+    <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
+    <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='resultPageStyle.css') }}">
+</head>
+<body>
+<div id="large-header" class="large-header">
+    <canvas id="demo-canvas"></canvas>
+    <h1 class="main-title"><span class="thin">Prediction:</span>{{ prediction }}</h1>
+    <div class="centered-content">
+        <img src="{{ url_for('uploaded_file', filename=image_filename) }}" alt="Uploaded Image">
+        <form action="/delete/{{ image_filename }}" method="post">
+            <button type="submit">Go Back</button>
+        </form>
+    </div>
+</div>
+</body>
+<script src="{{ url_for('static', filename='resultPage.js') }}"></script>
+</html>
+
+
+
+

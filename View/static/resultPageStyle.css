@@ -1,0 +1,64 @@
+/* Header */
+.large-header {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    overflow: hidden;
+    z-index: 1;
+    background-image: url('https://i.pinimg.com/originals/27/c6/ef/27c6ef252d3355eea945366932adde6c.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title {
+    position: absolute;
+    top: 10%; /* Adjust if you want it higher or lower */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    background-color: #286180;
+    color: white;
+    font-family: 'Raleway', Calibri, Arial, sans-serif;
+    text-align: center;
+    font-size: 4em;
+    letter-spacing: 0.1em;
+    z-index: 2; /* Make sure this is above the canvas */
+}
+
+.centered-content {
+    position: absolute;
+    top: 25%; /* Adjust based on where you want it relative to the title */
+    text-align: center;
+    width: 75%;
+    z-index: 2; /* This ensures the form and image are above the canvas */
+}
+
+img {
+    max-width: 50%; /* Ensuring the image is responsive */
+    height: auto;
+}
+
+button {
+    margin-top: 40px; /* Space out the button from the image */
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 40%;
+    line-height: 40px;
+    color: #fff;
+    border: none;
+    background-color: #295b75;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+.main-title .thin {
+    font-weight: 200;
+}
+
